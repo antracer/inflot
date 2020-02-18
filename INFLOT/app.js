@@ -13,16 +13,6 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-app.get("/", function(req, res){
-
-    Post.find({}, function(err, posts){
-      res.render("home", {
-        startingContent: homeStartingContent,
-        posts: posts
-        });
-    });
-  });
-
 app.listen(3000, function() {
     console.log("Server started on port 3000");
   });
